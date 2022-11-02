@@ -1,0 +1,1724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221025 10:53:49.587" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Users\haebr\Desktop\QA\bringit-portal-b2b-web\tests">
+<suite id="s1-s1" name="Home Tc" source="C:\Users\haebr\Desktop\QA\bringit-portal-b2b-web\tests\home_tc.robot">
+<test id="s1-s1-t1" name="[Portal B2B] A.CLOUD-1009: Home - Validar Layout" line="15">
+<kw name="Abrir Navegador" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--no-sandbox");add_argument('--headless');add_argument("--disable-dev-shm-usage");add_argument("--window-size=1420,1080");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222");add_experimental_option("excludeSwitches", ["enable-logging"]);add_argument("--disable-popup-blocking");add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 10:53:50.134" level="INFO">Opening browser 'chrome' to base url 'https://b2b.bringit.com.br'.</msg>
+<status status="PASS" starttime="20221025 10:53:50.134" endtime="20221025 10:53:53.580"/>
+</kw>
+<status status="PASS" starttime="20221025 10:53:50.134" endtime="20221025 10:53:53.580"/>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arg>que esteja na tela home Portal b2b</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="que esteja na tela home Portal b2b" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:53:53.582" endtime="20221025 10:53:53.582"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:53:58.593" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221025 10:53:53.582" endtime="20221025 10:53:58.593"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Eceita_Cookie}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221025 10:53:59.512" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221025 10:53:59.512" level="FAIL">Element with locator 'id:amgdprcookie-form' not found.</msg>
+<status status="FAIL" starttime="20221025 10:53:58.594" endtime="20221025 10:53:59.512"/>
+</kw>
+<msg timestamp="20221025 10:53:59.512" level="INFO">${Eceita_Cookie} = False</msg>
+<status status="PASS" starttime="20221025 10:53:58.593" endtime="20221025 10:53:59.512"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Eceita_Cookie}&quot; == &quot;True&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnAceitCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221025 10:53:59.512" endtime="20221025 10:53:59.512"/>
+</kw>
+<status status="NOT RUN" starttime="20221025 10:53:59.512" endtime="20221025 10:53:59.512"/>
+</branch>
+<status status="PASS" starttime="20221025 10:53:59.512" endtime="20221025 10:53:59.512"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:53:59.512" endtime="20221025 10:54:00.164"/>
+</kw>
+<status status="PASS" starttime="20221025 10:53:53.581" endtime="20221025 10:54:00.164"/>
+</kw>
+<status status="PASS" starttime="20221025 10:53:53.581" endtime="20221025 10:54:00.164"/>
+</kw>
+<status status="PASS" starttime="20221025 10:53:53.581" endtime="20221025 10:54:00.165"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>verifique BLOCO 1 banners</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifique BLOCO 1 banners" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:00.168" endtime="20221025 10:54:00.168"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpAcessInfo}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:00.169" endtime="20221025 10:54:00.879"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpAcessInfo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:00.879" endtime="20221025 10:54:01.322"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:03.344" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:01.324" endtime="20221025 10:54:03.344"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:00.167" endtime="20221025 10:54:03.344"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:00.167" endtime="20221025 10:54:03.344"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:00.166" endtime="20221025 10:54:03.344"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>verifique BLOCO 2 newsletter</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifique BLOCO 2 newsletter" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:03.345" endtime="20221025 10:54:03.345"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpnewsletter}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:03.345" endtime="20221025 10:54:04.044"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpnewsletter}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:04.044" endtime="20221025 10:54:04.454"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:06.467" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:04.454" endtime="20221025 10:54:06.467"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:03.345" endtime="20221025 10:54:06.467"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:03.344" endtime="20221025 10:54:06.467"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:03.344" endtime="20221025 10:54:06.467"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>verifique BLOCO 3 Produtos na lateral</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifique BLOCO 3 Produtos na lateral" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:06.472" endtime="20221025 10:54:06.473"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpPecasNote}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:06.473" endtime="20221025 10:54:07.171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpPecasNote}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:07.171" endtime="20221025 10:54:07.601"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:09.609" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:07.601" endtime="20221025 10:54:09.609"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:06.471" endtime="20221025 10:54:09.609"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:06.471" endtime="20221025 10:54:09.609"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:06.467" endtime="20221025 10:54:09.609"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>verifique BLOCO 4 Produtos na horizontal</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifique BLOCO 4 Produtos na horizontal" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:09.611" endtime="20221025 10:54:09.611"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpCuidadoManut}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:09.611" endtime="20221025 10:54:10.341"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpCuidadoManut}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:10.341" endtime="20221025 10:54:10.783"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:12.789" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:10.783" endtime="20221025 10:54:12.789"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:09.611" endtime="20221025 10:54:12.789"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:09.611" endtime="20221025 10:54:12.789"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:09.611" endtime="20221025 10:54:12.789"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>verifique BLOCO 5 cuidado e manutencao</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifique BLOCO 5 cuidado e manutencao" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:12.789" endtime="20221025 10:54:12.789"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpCuidadoManut}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:12.789" endtime="20221025 10:54:13.503"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpCuidadoManut}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:13.503" endtime="20221025 10:54:13.939"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:15.939" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:13.939" endtime="20221025 10:54:15.939"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:12.789" endtime="20221025 10:54:15.939"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:12.789" endtime="20221025 10:54:15.939"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:12.789" endtime="20221025 10:54:15.939"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>verifique BLOCO 6 rodapé página</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifique BLOCO 6 rodapé página" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:15.939" endtime="20221025 10:54:15.945"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpRodape}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:15.945" endtime="20221025 10:54:16.643"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpRodape}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:16.643" endtime="20221025 10:54:17.092"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:20.101" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:17.092" endtime="20221025 10:54:20.101"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:15.939" endtime="20221025 10:54:20.101"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:15.939" endtime="20221025 10:54:20.101"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:15.939" endtime="20221025 10:54:20.101"/>
+</kw>
+<kw name="Então" library="BDDpt-BR">
+<arg>layout página de inicio validado com sucesso</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="layout página de inicio validado com sucesso" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:20.101" endtime="20221025 10:54:20.101"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:20.101" endtime="20221025 10:54:20.800"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:54:20.800" level="INFO">Clicking element 'xpath:(//img[contains(@data-element,'image')])[1]'.</msg>
+<status status="PASS" starttime="20221025 10:54:20.800" endtime="20221025 10:54:21.964"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:23.972" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:21.964" endtime="20221025 10:54:23.972"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:23.973" endtime="20221025 10:54:24.393"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:26.393" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:24.393" endtime="20221025 10:54:26.393"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:20.101" endtime="20221025 10:54:26.393"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:20.101" endtime="20221025 10:54:26.393"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:20.101" endtime="20221025 10:54:26.393"/>
+</kw>
+<kw name="Fechar Navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 10:54:26.393" endtime="20221025 10:54:28.677"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:26.393" endtime="20221025 10:54:28.677"/>
+</kw>
+<tag>SMOKE_TEST</tag>
+<status status="PASS" starttime="20221025 10:53:50.134" endtime="20221025 10:54:28.677"/>
+</test>
+<test id="s1-s1-t2" name="[Portal B2B] A.CLOUD-1010: Home - Nossa Estrutura" line="26">
+<kw name="Abrir Navegador" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--no-sandbox");add_argument('--headless');add_argument("--disable-dev-shm-usage");add_argument("--window-size=1420,1080");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222");add_experimental_option("excludeSwitches", ["enable-logging"]);add_argument("--disable-popup-blocking");add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 10:54:28.677" level="INFO">Opening browser 'chrome' to base url 'https://b2b.bringit.com.br'.</msg>
+<status status="PASS" starttime="20221025 10:54:28.677" endtime="20221025 10:54:34.010"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:28.677" endtime="20221025 10:54:34.011"/>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arg>que esteja na tela home Portal b2b</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="que esteja na tela home Portal b2b" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:34.011" endtime="20221025 10:54:34.011"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:39.022" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:34.011" endtime="20221025 10:54:39.022"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Eceita_Cookie}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221025 10:54:40.085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221025 10:54:40.085" level="FAIL">Element with locator 'id:amgdprcookie-form' not found.</msg>
+<status status="FAIL" starttime="20221025 10:54:39.022" endtime="20221025 10:54:40.085"/>
+</kw>
+<msg timestamp="20221025 10:54:40.085" level="INFO">${Eceita_Cookie} = False</msg>
+<status status="PASS" starttime="20221025 10:54:39.022" endtime="20221025 10:54:40.085"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Eceita_Cookie}&quot; == &quot;True&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnAceitCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221025 10:54:40.085" endtime="20221025 10:54:40.085"/>
+</kw>
+<status status="NOT RUN" starttime="20221025 10:54:40.085" endtime="20221025 10:54:40.085"/>
+</branch>
+<status status="PASS" starttime="20221025 10:54:40.085" endtime="20221025 10:54:40.085"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:40.085" endtime="20221025 10:54:40.752"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:34.011" endtime="20221025 10:54:40.752"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:34.011" endtime="20221025 10:54:40.752"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:34.011" endtime="20221025 10:54:40.752"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique no BLOCO Nossa Estrutura</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique no BLOCO Nossa Estrutura" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:40.752" endtime="20221025 10:54:40.752"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpNossaEstrutura}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:40.752" endtime="20221025 10:54:41.462"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.cmpNossaEstrutura}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:54:41.463" level="INFO">Clicking element 'xpath://img[@src='https://b2b.bringit.com.br/media/wysiwyg/nossa_estrutura_2_.jpg']'.</msg>
+<status status="PASS" starttime="20221025 10:54:41.462" endtime="20221025 10:54:42.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:44.526" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:42.525" endtime="20221025 10:54:44.526"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:40.752" endtime="20221025 10:54:44.526"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:40.752" endtime="20221025 10:54:44.526"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:40.752" endtime="20221025 10:54:44.526"/>
+</kw>
+<kw name="Então" library="BDDpt-BR">
+<arg>o sistema deve apresentar a página NOSSA ESTRUTURA</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="o sistema deve apresentar a página NOSSA ESTRUTURA" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:44.529" endtime="20221025 10:54:44.529"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.TitleGrupoProxys}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:44.529" endtime="20221025 10:54:44.978"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.TitleNossaEstrutura}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:54:44.978" endtime="20221025 10:54:45.672"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.TitleNossaEstrutura}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:54:45.672" endtime="20221025 10:54:46.080"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:48.091" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:46.080" endtime="20221025 10:54:48.091"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:44.528" endtime="20221025 10:54:48.091"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:44.528" endtime="20221025 10:54:48.091"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:44.527" endtime="20221025 10:54:48.091"/>
+</kw>
+<kw name="Fechar Navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 10:54:48.091" endtime="20221025 10:54:50.348"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:48.091" endtime="20221025 10:54:50.348"/>
+</kw>
+<tag>SMOKE_TEST</tag>
+<status status="PASS" starttime="20221025 10:54:28.677" endtime="20221025 10:54:50.348"/>
+</test>
+<test id="s1-s1-t3" name="[Portal B2B] A.CLOUD-1011: Home - Nossos Números" line="32">
+<kw name="Abrir Navegador" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--no-sandbox");add_argument('--headless');add_argument("--disable-dev-shm-usage");add_argument("--window-size=1420,1080");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222");add_experimental_option("excludeSwitches", ["enable-logging"]);add_argument("--disable-popup-blocking");add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 10:54:50.348" level="INFO">Opening browser 'chrome' to base url 'https://b2b.bringit.com.br'.</msg>
+<status status="PASS" starttime="20221025 10:54:50.348" endtime="20221025 10:54:54.255"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:50.348" endtime="20221025 10:54:54.255"/>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arg>que esteja na tela home Portal b2b</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="que esteja na tela home Portal b2b" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:54:54.255" endtime="20221025 10:54:54.255"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:54:59.263" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221025 10:54:54.255" endtime="20221025 10:54:59.263"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Eceita_Cookie}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221025 10:55:00.381" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221025 10:55:00.382" level="FAIL">Element with locator 'id:amgdprcookie-form' not found.</msg>
+<status status="FAIL" starttime="20221025 10:54:59.263" endtime="20221025 10:55:00.382"/>
+</kw>
+<msg timestamp="20221025 10:55:00.382" level="INFO">${Eceita_Cookie} = False</msg>
+<status status="PASS" starttime="20221025 10:54:59.263" endtime="20221025 10:55:00.382"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Eceita_Cookie}&quot; == &quot;True&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnAceitCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221025 10:55:00.382" endtime="20221025 10:55:00.382"/>
+</kw>
+<status status="NOT RUN" starttime="20221025 10:55:00.382" endtime="20221025 10:55:00.382"/>
+</branch>
+<status status="PASS" starttime="20221025 10:55:00.382" endtime="20221025 10:55:00.382"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:00.382" endtime="20221025 10:55:01.042"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:54.255" endtime="20221025 10:55:01.042"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:54.255" endtime="20221025 10:55:01.042"/>
+</kw>
+<status status="PASS" starttime="20221025 10:54:54.255" endtime="20221025 10:55:01.042"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique no BLOCO Nossos Números</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique no BLOCO Nossos Números" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:01.042" endtime="20221025 10:55:01.042"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpNossosNum}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:55:01.042" endtime="20221025 10:55:01.778"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.cmpNossosNum}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:55:01.778" level="INFO">Clicking element 'xpath://img[@src='https://b2b.bringit.com.br/media/wysiwyg/nossa_estrutura_3_.png']'.</msg>
+<status status="PASS" starttime="20221025 10:55:01.778" endtime="20221025 10:55:02.782"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:55:04.786" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:55:02.782" endtime="20221025 10:55:04.786"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:01.042" endtime="20221025 10:55:04.787"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:01.042" endtime="20221025 10:55:04.787"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:01.042" endtime="20221025 10:55:04.787"/>
+</kw>
+<kw name="Então" library="BDDpt-BR">
+<arg>o sistema deve apresentar a página NOSSOS NÚMEROS</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="o sistema deve apresentar a página NOSSOS NÚMEROS" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:04.787" endtime="20221025 10:55:04.787"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.TitleNossosNum}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:04.787" endtime="20221025 10:55:05.227"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.TitleRegAtend}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:55:05.227" endtime="20221025 10:55:05.920"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:04.787" endtime="20221025 10:55:05.920"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:04.787" endtime="20221025 10:55:05.920"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:04.787" endtime="20221025 10:55:05.920"/>
+</kw>
+<kw name="Fechar Navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 10:55:05.920" endtime="20221025 10:55:08.182"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:05.920" endtime="20221025 10:55:08.182"/>
+</kw>
+<tag>SMOKE_TEST</tag>
+<status status="PASS" starttime="20221025 10:54:50.348" endtime="20221025 10:55:08.182"/>
+</test>
+<test id="s1-s1-t4" name="[Portal B2B] A.CLOUD-1012: Home - Como Comprar" line="38">
+<kw name="Abrir Navegador" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--no-sandbox");add_argument('--headless');add_argument("--disable-dev-shm-usage");add_argument("--window-size=1420,1080");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222");add_experimental_option("excludeSwitches", ["enable-logging"]);add_argument("--disable-popup-blocking");add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 10:55:08.182" level="INFO">Opening browser 'chrome' to base url 'https://b2b.bringit.com.br'.</msg>
+<status status="PASS" starttime="20221025 10:55:08.182" endtime="20221025 10:55:12.241"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:08.182" endtime="20221025 10:55:12.241"/>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arg>que esteja na tela home Portal b2b</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="que esteja na tela home Portal b2b" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:12.241" endtime="20221025 10:55:12.241"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:55:17.243" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221025 10:55:12.241" endtime="20221025 10:55:17.243"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Eceita_Cookie}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221025 10:55:18.314" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221025 10:55:18.314" level="FAIL">Element with locator 'id:amgdprcookie-form' not found.</msg>
+<status status="FAIL" starttime="20221025 10:55:17.243" endtime="20221025 10:55:18.314"/>
+</kw>
+<msg timestamp="20221025 10:55:18.314" level="INFO">${Eceita_Cookie} = False</msg>
+<status status="PASS" starttime="20221025 10:55:17.243" endtime="20221025 10:55:18.314"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Eceita_Cookie}&quot; == &quot;True&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnAceitCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221025 10:55:18.314" endtime="20221025 10:55:18.314"/>
+</kw>
+<status status="NOT RUN" starttime="20221025 10:55:18.314" endtime="20221025 10:55:18.314"/>
+</branch>
+<status status="PASS" starttime="20221025 10:55:18.314" endtime="20221025 10:55:18.314"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:18.314" endtime="20221025 10:55:18.989"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:12.241" endtime="20221025 10:55:18.989"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:12.241" endtime="20221025 10:55:18.989"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:12.241" endtime="20221025 10:55:18.989"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique menu link COMO COMPRAR</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique menu link COMO COMPRAR" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:18.989" endtime="20221025 10:55:18.989"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuComoComprar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:18.989" endtime="20221025 10:55:19.645"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:55:22.657" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221025 10:55:19.645" endtime="20221025 10:55:22.657"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:18.989" endtime="20221025 10:55:22.657"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:18.989" endtime="20221025 10:55:22.657"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:18.989" endtime="20221025 10:55:22.657"/>
+</kw>
+<kw name="Então" library="BDDpt-BR">
+<arg>o sistema deve apresentar a página COMO COMPRAR</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="o sistema deve apresentar a página COMO COMPRAR" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:22.657" endtime="20221025 10:55:22.657"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuComoComprar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:55:22.657" level="INFO">Clicking element 'xpath:(//span[contains(.,'Como Comprar')])[2]'.</msg>
+<status status="PASS" starttime="20221025 10:55:22.657" endtime="20221025 10:55:24.582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.TitleComoComprar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:24.582" endtime="20221025 10:55:25.272"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmp1Cadastre}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:25.272" endtime="20221025 10:55:25.929"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmp2Escolha}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:25.929" endtime="20221025 10:55:26.578"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TOPO_B2B.btnEntreContato}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:55:26.578" endtime="20221025 10:55:27.489"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmp3Selecione}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:27.489" endtime="20221025 10:55:28.108"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmp4SelecioneA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:28.108" endtime="20221025 10:55:28.737"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.btnEntreContato}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:28.737" endtime="20221025 10:55:29.365"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:55:29.365" endtime="20221025 10:55:30.248"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:55:30.248" level="INFO">Clicking element 'xpath:(//img[contains(@data-element,'image')])[1]'.</msg>
+<status status="PASS" starttime="20221025 10:55:30.248" endtime="20221025 10:55:31.607"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:55:33.611" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:55:31.607" endtime="20221025 10:55:33.611"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:22.657" endtime="20221025 10:55:33.611"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:22.657" endtime="20221025 10:55:33.611"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:22.657" endtime="20221025 10:55:33.611"/>
+</kw>
+<kw name="Fechar Navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 10:55:33.611" endtime="20221025 10:55:35.979"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:33.611" endtime="20221025 10:55:35.979"/>
+</kw>
+<tag>SMOKE_TEST</tag>
+<status status="PASS" starttime="20221025 10:55:08.182" endtime="20221025 10:55:35.979"/>
+</test>
+<test id="s1-s1-t5" name="[Portal B2B] A.CLOUD-1013: Home - Descontos por Quantidade" line="44">
+<kw name="Abrir Navegador" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--no-sandbox");add_argument('--headless');add_argument("--disable-dev-shm-usage");add_argument("--window-size=1420,1080");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222");add_experimental_option("excludeSwitches", ["enable-logging"]);add_argument("--disable-popup-blocking");add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 10:55:35.979" level="INFO">Opening browser 'chrome' to base url 'https://b2b.bringit.com.br'.</msg>
+<status status="PASS" starttime="20221025 10:55:35.979" endtime="20221025 10:55:39.973"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:35.979" endtime="20221025 10:55:39.974"/>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arg>que esteja na tela home Portal b2b</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="que esteja na tela home Portal b2b" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:39.976" endtime="20221025 10:55:39.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:55:44.984" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221025 10:55:39.976" endtime="20221025 10:55:44.984"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Eceita_Cookie}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221025 10:55:46.171" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221025 10:55:46.172" level="FAIL">Element with locator 'id:amgdprcookie-form' not found.</msg>
+<status status="FAIL" starttime="20221025 10:55:44.985" endtime="20221025 10:55:46.173"/>
+</kw>
+<msg timestamp="20221025 10:55:46.174" level="INFO">${Eceita_Cookie} = False</msg>
+<status status="PASS" starttime="20221025 10:55:44.984" endtime="20221025 10:55:46.174"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Eceita_Cookie}&quot; == &quot;True&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnAceitCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221025 10:55:46.174" endtime="20221025 10:55:46.174"/>
+</kw>
+<status status="NOT RUN" starttime="20221025 10:55:46.174" endtime="20221025 10:55:46.174"/>
+</branch>
+<status status="PASS" starttime="20221025 10:55:46.174" endtime="20221025 10:55:46.174"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:46.174" endtime="20221025 10:55:46.826"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:39.976" endtime="20221025 10:55:46.826"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:39.975" endtime="20221025 10:55:46.826"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:39.975" endtime="20221025 10:55:46.826"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique no BLOCO Desconto por Quantidade</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique no BLOCO Desconto por Quantidade" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:46.829" endtime="20221025 10:55:46.830"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpDescQde}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:55:46.830" endtime="20221025 10:55:47.755"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpDescQde}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:47.755" endtime="20221025 10:55:48.397"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.cmpDescQde}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:55:48.399" level="INFO">Clicking element 'xpath://img[@src='https://b2b.bringit.com.br/media/wysiwyg/Como_4_.png']'.</msg>
+<status status="PASS" starttime="20221025 10:55:48.397" endtime="20221025 10:55:49.653"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:55:51.668" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:55:49.653" endtime="20221025 10:55:51.668"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:46.829" endtime="20221025 10:55:51.668"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:46.828" endtime="20221025 10:55:51.668"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:46.827" endtime="20221025 10:55:51.668"/>
+</kw>
+<kw name="Então" library="BDDpt-BR">
+<arg>o sistema deve apresentar a página Desconto por Quantidade</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name=" o sistema deve apresentar a página Desconto por Quantidade" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:51.671" endtime="20221025 10:55:51.671"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.TitleDescQde}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:55:51.671" endtime="20221025 10:55:52.321"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpCaboHDMI}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:55:52.321" endtime="20221025 10:55:53.247"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:51.671" endtime="20221025 10:55:53.247"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:51.671" endtime="20221025 10:55:53.247"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:51.671" endtime="20221025 10:55:53.247"/>
+</kw>
+<kw name="Fechar Navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 10:55:53.247" endtime="20221025 10:55:55.599"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:53.247" endtime="20221025 10:55:55.599"/>
+</kw>
+<tag>SMOKE_TEST</tag>
+<status status="PASS" starttime="20221025 10:55:35.979" endtime="20221025 10:55:55.599"/>
+</test>
+<test id="s1-s1-t6" name="[Portal B2B] A.CLOUD-1014: Home - Boleto Faturado" line="50">
+<kw name="Abrir Navegador" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--no-sandbox");add_argument('--headless');add_argument("--disable-dev-shm-usage");add_argument("--window-size=1420,1080");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222");add_experimental_option("excludeSwitches", ["enable-logging"]);add_argument("--disable-popup-blocking");add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 10:55:55.599" level="INFO">Opening browser 'chrome' to base url 'https://b2b.bringit.com.br'.</msg>
+<status status="PASS" starttime="20221025 10:55:55.599" endtime="20221025 10:55:59.594"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:55.599" endtime="20221025 10:55:59.594"/>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arg>que esteja na tela home Portal b2b</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="que esteja na tela home Portal b2b" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:55:59.596" endtime="20221025 10:55:59.596"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:04.607" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221025 10:55:59.596" endtime="20221025 10:56:04.607"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Eceita_Cookie}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221025 10:56:05.766" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221025 10:56:05.766" level="FAIL">Element with locator 'id:amgdprcookie-form' not found.</msg>
+<status status="FAIL" starttime="20221025 10:56:04.608" endtime="20221025 10:56:05.766"/>
+</kw>
+<msg timestamp="20221025 10:56:05.766" level="INFO">${Eceita_Cookie} = False</msg>
+<status status="PASS" starttime="20221025 10:56:04.607" endtime="20221025 10:56:05.766"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Eceita_Cookie}&quot; == &quot;True&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnAceitCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221025 10:56:05.766" endtime="20221025 10:56:05.766"/>
+</kw>
+<status status="NOT RUN" starttime="20221025 10:56:05.766" endtime="20221025 10:56:05.766"/>
+</branch>
+<status status="PASS" starttime="20221025 10:56:05.766" endtime="20221025 10:56:05.766"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:05.766" endtime="20221025 10:56:06.434"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:59.596" endtime="20221025 10:56:06.435"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:59.596" endtime="20221025 10:56:06.435"/>
+</kw>
+<status status="PASS" starttime="20221025 10:55:59.595" endtime="20221025 10:56:06.435"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique menu link BOLETO FATURADO</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique menu link BOLETO FATURADO" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:56:06.439" endtime="20221025 10:56:06.440"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuBoletFat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:06.440" endtime="20221025 10:56:07.083"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuBoletFat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:56:07.083" level="INFO">Clicking element 'xpath:(//span[contains(.,'Boleto faturado')])[2]'.</msg>
+<status status="PASS" starttime="20221025 10:56:07.083" endtime="20221025 10:56:08.448"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.TitleBoletoFat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:08.448" endtime="20221025 10:56:09.115"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.SubTitleCadatro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:09.115" endtime="20221025 10:56:09.758"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TOPO_B2B.SubTitlLimitCred}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:56:09.758" endtime="20221025 10:56:10.678"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TOPO_B2B.SubTitlPrazos}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:56:10.678" endtime="20221025 10:56:11.581"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:13.586" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:11.581" endtime="20221025 10:56:13.586"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:06.438" endtime="20221025 10:56:13.586"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:06.437" endtime="20221025 10:56:13.586"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:06.436" endtime="20221025 10:56:13.586"/>
+</kw>
+<kw name="Quando" library="BDDpt-BR">
+<arg>o formulário LIMITE CRÉDITO estiver visível</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="o formulário LIMITE CRÉDITO estiver visível" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:56:13.586" endtime="20221025 10:56:13.586"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.cmpCartaoCNPJ}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:56:13.586" endtime="20221025 10:56:14.495"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:16.508" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:14.495" endtime="20221025 10:56:16.508"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:13.586" endtime="20221025 10:56:16.508"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:13.586" endtime="20221025 10:56:16.508"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:13.586" endtime="20221025 10:56:16.508"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>preencha o formulário com dados válidos</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="preencha o formulário com dados válidos" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:56:16.511" endtime="20221025 10:56:16.511"/>
+</kw>
+<kw name="First Name Nonbinary" library="FakerLibrary">
+<var>${FIRSTNAME}</var>
+<msg timestamp="20221025 10:56:16.512" level="INFO">${FIRSTNAME} = Lucca</msg>
+<status status="PASS" starttime="20221025 10:56:16.512" endtime="20221025 10:56:16.512"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${HOME.cmpNomeEmpresa}</arg>
+<arg>${FIRSTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221025 10:56:16.513" level="INFO">Typing text 'Lucca' into text field 'id:corporate-name'.</msg>
+<status status="PASS" starttime="20221025 10:56:16.512" endtime="20221025 10:56:17.519"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:19.524" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:17.519" endtime="20221025 10:56:19.524"/>
+</kw>
+<kw name="Cnpj" library="FakerLibrary">
+<var>${CNJP}</var>
+<msg timestamp="20221025 10:56:19.524" level="INFO">${CNJP} = 67.514.893/0001-64</msg>
+<status status="PASS" starttime="20221025 10:56:19.524" endtime="20221025 10:56:19.524"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${HOME.cmpCNPJ}</arg>
+<arg>HOME+${CNJP}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221025 10:56:19.524" level="INFO">Sending key(s) ('HOME+67.514.893/0001-64',) to id:cnpj element.</msg>
+<msg timestamp="20221025 10:56:20.444" level="INFO">Pressing special key HOME down.</msg>
+<msg timestamp="20221025 10:56:20.444" level="INFO">Sending keys 67.514.893/0001-64</msg>
+<msg timestamp="20221025 10:56:20.444" level="INFO">Releasing special key HOME.</msg>
+<status status="PASS" starttime="20221025 10:56:19.524" endtime="20221025 10:56:20.792"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:22.797" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:20.792" endtime="20221025 10:56:22.798"/>
+</kw>
+<kw name="Free Email" library="FakerLibrary">
+<var>${EMAIL_TEST}</var>
+<msg timestamp="20221025 10:56:22.799" level="INFO">${EMAIL_TEST} = da-luzbenicio@bol.com.br</msg>
+<status status="PASS" starttime="20221025 10:56:22.798" endtime="20221025 10:56:22.799"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${HOME.cmpEmail}</arg>
+<arg>${EMAIL_TEST}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221025 10:56:22.801" level="INFO">Typing text 'da-luzbenicio@bol.com.br' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20221025 10:56:22.799" endtime="20221025 10:56:23.857"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:25.871" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:23.857" endtime="20221025 10:56:25.872"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.cmpCredSolicitado}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:56:25.875" level="INFO">Clicking element 'id:credit-requested'.</msg>
+<status status="PASS" starttime="20221025 10:56:25.872" endtime="20221025 10:56:26.562"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:28.574" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:26.562" endtime="20221025 10:56:28.574"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.cmpValorLimite}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:56:28.576" level="INFO">Clicking element 'xpath://option[1][text()="Até R$2mil"]'.</msg>
+<status status="PASS" starttime="20221025 10:56:28.574" endtime="20221025 10:56:29.239"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:31.245" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:29.239" endtime="20221025 10:56:31.245"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:16.511" endtime="20221025 10:56:31.246"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:16.511" endtime="20221025 10:56:31.246"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:16.509" endtime="20221025 10:56:31.246"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique no botão ENVIAR</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique no botão ENVIAR" library="home_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:56:31.249" endtime="20221025 10:56:31.250"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HOME.btnEnviarForm}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:56:31.250" endtime="20221025 10:56:32.177"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpAnexarArquivo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:32.177" endtime="20221025 10:56:32.828"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnEnviarForm}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:56:32.828" level="INFO">Clicking element 'xpath://span[text()="Enviar"]'.</msg>
+<status status="PASS" starttime="20221025 10:56:32.828" endtime="20221025 10:56:34.527"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:36.538" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:34.528" endtime="20221025 10:56:36.538"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:31.249" endtime="20221025 10:56:36.538"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:31.248" endtime="20221025 10:56:36.538"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:31.247" endtime="20221025 10:56:36.538"/>
+</kw>
+<kw name="Fechar Navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 10:56:36.538" endtime="20221025 10:56:38.921"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:36.538" endtime="20221025 10:56:38.921"/>
+</kw>
+<tag>SMOKE_TEST</tag>
+<status status="PASS" starttime="20221025 10:55:55.599" endtime="20221025 10:56:38.921"/>
+</test>
+<doc>Funcionalidade: HOME Portal B2B</doc>
+<status status="PASS" starttime="20221025 10:53:49.618" endtime="20221025 10:56:38.921"/>
+</suite>
+<suite id="s1-s2" name="Topo Tc" source="C:\Users\haebr\Desktop\QA\bringit-portal-b2b-web\tests\topo_tc.robot">
+<test id="s1-s2-t1" name="[Portal B2B] A.CLOUD-1007: Topo Site - Validar Layout" line="15">
+<kw name="Abrir Navegador" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--no-sandbox");add_argument('--headless');add_argument("--disable-dev-shm-usage");add_argument("--window-size=1420,1080");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222");add_experimental_option("excludeSwitches", ["enable-logging"]);add_argument("--disable-popup-blocking");add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 10:56:38.950" level="INFO">Opening browser 'chrome' to base url 'https://b2b.bringit.com.br'.</msg>
+<status status="PASS" starttime="20221025 10:56:38.950" endtime="20221025 10:56:42.741"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:38.950" endtime="20221025 10:56:42.741"/>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arg>que esteja na tela home Portal b2b</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="que esteja na tela home Portal b2b" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:56:42.742" endtime="20221025 10:56:42.743"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:47.751" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:42.743" endtime="20221025 10:56:47.751"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Eceita_Cookie}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221025 10:56:48.874" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221025 10:56:48.875" level="FAIL">Element with locator 'id:amgdprcookie-form' not found.</msg>
+<status status="FAIL" starttime="20221025 10:56:47.751" endtime="20221025 10:56:48.876"/>
+</kw>
+<msg timestamp="20221025 10:56:48.876" level="INFO">${Eceita_Cookie} = False</msg>
+<status status="PASS" starttime="20221025 10:56:47.751" endtime="20221025 10:56:48.876"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Eceita_Cookie}&quot; == &quot;True&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnAceitCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221025 10:56:48.876" endtime="20221025 10:56:48.876"/>
+</kw>
+<status status="NOT RUN" starttime="20221025 10:56:48.876" endtime="20221025 10:56:48.876"/>
+</branch>
+<status status="PASS" starttime="20221025 10:56:48.876" endtime="20221025 10:56:48.876"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:48.876" endtime="20221025 10:56:49.542"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:42.742" endtime="20221025 10:56:49.542"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:42.742" endtime="20221025 10:56:49.542"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:42.742" endtime="20221025 10:56:49.542"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>verifique se esta visível logo site</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifique se esta visível logo site" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:56:49.546" endtime="20221025 10:56:49.547"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:49.547" endtime="20221025 10:56:49.963"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:51.979" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:49.964" endtime="20221025 10:56:51.979"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:49.546" endtime="20221025 10:56:51.979"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:49.545" endtime="20221025 10:56:51.980"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:49.544" endtime="20221025 10:56:51.980"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>verifique campo menu</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifique campo menu" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:56:51.983" endtime="20221025 10:56:51.984"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuBoletFat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:51.984" endtime="20221025 10:56:52.647"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuMeiosPgto}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:52.647" endtime="20221025 10:56:53.303"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuCotacoes}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:53.304" endtime="20221025 10:56:53.951"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuComoComprar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:53.951" endtime="20221025 10:56:54.596"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:51.983" endtime="20221025 10:56:54.596"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:51.982" endtime="20221025 10:56:54.596"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:51.981" endtime="20221025 10:56:54.596"/>
+</kw>
+<kw name="Então" library="BDDpt-BR">
+<arg>Layout Topo Site validado com sucesso</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Layout Topo Site validado com sucesso" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:56:54.601" endtime="20221025 10:56:54.601"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:56:54.602" endtime="20221025 10:56:55.047"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:56:57.055" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:56:55.047" endtime="20221025 10:56:57.055"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:54.600" endtime="20221025 10:56:57.056"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:54.599" endtime="20221025 10:56:57.056"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:54.597" endtime="20221025 10:56:57.056"/>
+</kw>
+<kw name="Fechar Navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 10:56:57.058" endtime="20221025 10:56:59.316"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:57.057" endtime="20221025 10:56:59.316"/>
+</kw>
+<tag>SMOKE_TEST</tag>
+<status status="PASS" starttime="20221025 10:56:38.950" endtime="20221025 10:56:59.316"/>
+</test>
+<test id="s1-s2-t2" name="[Portal B2B] A.CLOUD-1008: Topo Site - Validar Redirecionamento Menu" line="22">
+<kw name="Abrir Navegador" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--no-sandbox");add_argument('--headless');add_argument("--disable-dev-shm-usage");add_argument("--window-size=1420,1080");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222");add_experimental_option("excludeSwitches", ["enable-logging"]);add_argument("--disable-popup-blocking");add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 10:56:59.316" level="INFO">Opening browser 'chrome' to base url 'https://b2b.bringit.com.br'.</msg>
+<status status="PASS" starttime="20221025 10:56:59.316" endtime="20221025 10:57:03.220"/>
+</kw>
+<status status="PASS" starttime="20221025 10:56:59.316" endtime="20221025 10:57:03.220"/>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arg>que esteja na tela home Portal b2b</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="que esteja na tela home Portal b2b" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:57:03.220" endtime="20221025 10:57:03.220"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:57:08.221" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221025 10:57:03.220" endtime="20221025 10:57:08.221"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Eceita_Cookie}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HOME.cmpFormCookies}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221025 10:57:09.284" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221025 10:57:09.284" level="FAIL">Element with locator 'id:amgdprcookie-form' not found.</msg>
+<status status="FAIL" starttime="20221025 10:57:08.221" endtime="20221025 10:57:09.284"/>
+</kw>
+<msg timestamp="20221025 10:57:09.284" level="INFO">${Eceita_Cookie} = False</msg>
+<status status="PASS" starttime="20221025 10:57:08.221" endtime="20221025 10:57:09.284"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Eceita_Cookie}&quot; == &quot;True&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.btnAceitCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221025 10:57:09.284" endtime="20221025 10:57:09.284"/>
+</kw>
+<status status="NOT RUN" starttime="20221025 10:57:09.284" endtime="20221025 10:57:09.284"/>
+</branch>
+<status status="PASS" starttime="20221025 10:57:09.284" endtime="20221025 10:57:09.284"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:09.284" endtime="20221025 10:57:09.967"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:03.220" endtime="20221025 10:57:09.967"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:03.220" endtime="20221025 10:57:09.967"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:03.220" endtime="20221025 10:57:09.967"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique menu link BOLETO FATURADO</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique menu link BOLETO FATURADO" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:57:09.967" endtime="20221025 10:57:09.967"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuBoletFat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:09.967" endtime="20221025 10:57:10.628"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuBoletFat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:57:10.628" level="INFO">Clicking element 'xpath:(//span[contains(.,'Boleto faturado')])[2]'.</msg>
+<status status="PASS" starttime="20221025 10:57:10.628" endtime="20221025 10:57:11.885"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.TitleBoletoFat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:11.885" endtime="20221025 10:57:12.618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.SubTitleCadatro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:12.618" endtime="20221025 10:57:13.267"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TOPO_B2B.SubTitlLimitCred}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:57:13.268" endtime="20221025 10:57:14.182"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TOPO_B2B.SubTitlPrazos}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221025 10:57:14.182" endtime="20221025 10:57:15.080"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:57:17.094" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:57:15.080" endtime="20221025 10:57:17.095"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:09.967" endtime="20221025 10:57:17.095"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:09.967" endtime="20221025 10:57:17.095"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:09.967" endtime="20221025 10:57:17.095"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique menu link MEIOS PAGAMENTO</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique menu link MEIOS PAGAMENTO" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:57:17.099" endtime="20221025 10:57:17.099"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuMeiosPgto}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:17.100" endtime="20221025 10:57:17.747"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuMeiosPgto}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:57:17.749" level="INFO">Clicking element 'xpath:(//span[contains(.,'Meios de pagamento')])[2]'.</msg>
+<status status="PASS" starttime="20221025 10:57:17.748" endtime="20221025 10:57:18.886"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.TitleMeiosPgto}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:18.886" endtime="20221025 10:57:19.590"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.SubTitleMetodoPgto}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:19.590" endtime="20221025 10:57:20.223"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmpPIX}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:20.223" endtime="20221025 10:57:20.867"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmpDebConta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:20.867" endtime="20221025 10:57:21.527"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmpPgtoParc}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:21.527" endtime="20221025 10:57:22.181"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmpBolBancario}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:22.181" endtime="20221025 10:57:22.833"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmpTransfBanc}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:22.833" endtime="20221025 10:57:23.485"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.cmpBoletoFat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:23.485" endtime="20221025 10:57:24.131"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:57:26.133" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:57:24.131" endtime="20221025 10:57:26.133"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:57:26.133" level="INFO">Clicking element 'xpath:(//img[contains(@data-element,'image')])[1]'.</msg>
+<status status="PASS" starttime="20221025 10:57:26.133" endtime="20221025 10:57:27.366"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:27.367" endtime="20221025 10:57:28.078"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:57:30.092" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:57:28.078" endtime="20221025 10:57:30.092"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:17.098" endtime="20221025 10:57:30.092"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:17.098" endtime="20221025 10:57:30.092"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:17.097" endtime="20221025 10:57:30.092"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique menu link COMO COMPRAR</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique menu link COMO COMPRAR" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:57:30.092" endtime="20221025 10:57:30.092"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuComoComprar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:30.092" endtime="20221025 10:57:30.755"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:57:33.764" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221025 10:57:30.755" endtime="20221025 10:57:33.764"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:30.092" endtime="20221025 10:57:33.764"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:30.092" endtime="20221025 10:57:33.764"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:30.092" endtime="20221025 10:57:33.764"/>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arg>clique menu link BOLETO COTACOES</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clique menu link BOLETO COTACOES" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:57:33.764" endtime="20221025 10:57:33.764"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuCotacoes}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221025 10:57:33.764" endtime="20221025 10:57:34.422"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOPO_B2B.MenuCotacoes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 10:57:34.422" level="INFO">Clicking element 'xpath:(//span[contains(.,'Cotações')])[2]'.</msg>
+<status status="PASS" starttime="20221025 10:57:34.422" endtime="20221025 10:57:35.145"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:57:37.151" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:57:35.145" endtime="20221025 10:57:37.151"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:33.764" endtime="20221025 10:57:37.152"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:33.764" endtime="20221025 10:57:37.152"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:33.764" endtime="20221025 10:57:37.152"/>
+</kw>
+<kw name="Então" library="BDDpt-BR">
+<arg>redirecionmanto Link Menu validado com sucesso</arg>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>@{keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="redirecionmanto Link Menu validado com sucesso" library="topo_st">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221025 10:57:37.156" endtime="20221025 10:57:37.156"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 10:57:39.157" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 10:57:37.156" endtime="20221025 10:57:39.157"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:37.155" endtime="20221025 10:57:39.157"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:37.155" endtime="20221025 10:57:39.157"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:37.153" endtime="20221025 10:57:39.157"/>
+</kw>
+<kw name="Fechar Navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 10:57:39.157" endtime="20221025 10:57:41.523"/>
+</kw>
+<status status="PASS" starttime="20221025 10:57:39.157" endtime="20221025 10:57:41.523"/>
+</kw>
+<tag>SMOKE_TEST</tag>
+<status status="PASS" starttime="20221025 10:56:59.316" endtime="20221025 10:57:41.523"/>
+</test>
+<doc>Funcionalidade: topo</doc>
+<status status="PASS" starttime="20221025 10:56:38.921" endtime="20221025 10:57:41.523"/>
+</suite>
+<status status="PASS" starttime="20221025 10:53:49.587" endtime="20221025 10:57:41.523"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="8" fail="0" skip="0">SMOKE_TEST</stat>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Home Tc">Tests.Home Tc</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="Topo Tc">Tests.Topo Tc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
